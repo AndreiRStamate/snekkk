@@ -1,9 +1,9 @@
 # snekkk
 2snekxIN1
-###########################################################################
+
 Simple 2players snek game created in pygame
 The blue snek is controlled using WASD and the green one using the arrows.
-##########################################################################################################################################
+
 At the moment there are 2 modes available:
 1. "mode_crash" where you win if you make your enemy crash into you.
 2. "mode_points" where the snek that gets 50 points first wins(you can't crash into anything).
