@@ -299,11 +299,11 @@ def gameloop(mode_set):
                         speed2 = 6
                         cooldown_speed2 = True
                 elif event.key == pygame.K_KP1:
-                    if cooldown is False:
+                    if cooldown is False and mode_points is True:
                         point = 3
                         cooldown = True
                 elif event.key == pygame.K_r:
-                    if cooldown2 is False:
+                    if cooldown2 is False and mode_points is True:
                         point2 = 3
                         cooldown2 = True
                 elif event.key == pygame.K_p:
@@ -390,31 +390,31 @@ def gameloop(mode_set):
                 cooldown_speed2 = False
                 cd2 = 0
 
-        if point == 3:
-            p += 1
-        if p >= fps*5:
-            point = 1
-            p = 0
-            cooldown = True
+            if point == 3:
+                p += 1
+            if p >= fps*5:
+                point = 1
+                p = 0
+                cooldown = True
 
-        if point2 == 3:
-            p2 += 1
-        if p2 >= fps*5:
-            point2 = 1
-            p2 = 0
-            cooldown2 = True
+            if point2 == 3:
+                p2 += 1
+            if p2 >= fps*5:
+                point2 = 1
+                p2 = 0
+                cooldown2 = True
 
-        if cooldown:
-            dc += 1
-        if dc >= fps*15:
-            cooldown = False
-            dc = 0
+            if cooldown:
+                dc += 1
+            if dc >= fps*15:
+                cooldown = False
+                dc = 0
 
-        if cooldown2:
-            dc2 += 1
-        if dc2 >= fps*15:
-            cooldown2 = False
-            dc2 = 0
+            if cooldown2:
+                dc2 += 1
+            if dc2 >= fps*15:
+                cooldown2 = False
+                dc2 = 0
 
         message_to_corner("points: " + str(points), black)
         message_to_corner2("points: " + str(points2), black)
