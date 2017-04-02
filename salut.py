@@ -291,11 +291,11 @@ def gameloop(mode_set):
                     lead_y2_change = speed2
                     direction2 = 'down'
                 elif event.key == pygame.K_KP0:
-                    if cooldown_speed is False: #and mode_crash is False:
+                    if cooldown_speed is False and mode_points is True:
                         speed = 6
                         cooldown_speed = True
                 elif event.key == pygame.K_f:
-                    if cooldown_speed2 is False:
+                    if cooldown_speed2 is False and mode_points is True:
                         speed2 = 6
                         cooldown_speed2 = True
                 elif event.key == pygame.K_KP1:
